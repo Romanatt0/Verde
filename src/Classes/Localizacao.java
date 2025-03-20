@@ -1,12 +1,15 @@
 package Classes;
 
+import Repositorios.LocalizacaoRepositor;
+
 public class Localizacao {
 
     private int id;
     private String localizacao;
 
-    public Localizacao(String localizacao) {
+    public Localizacao(String localizacao, LocalizacaoRepositor repositorio) {
         this.localizacao = localizacao;
+        repositorio.salvar(this);
     }
 
     public int getId() {

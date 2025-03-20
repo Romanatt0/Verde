@@ -30,18 +30,10 @@ public class AreaVerdeRepo {
 
     public void listarAreaVerdes() {
         for (AreaVerde av : areaVerdes) {
-            System.out.printf("%d - %s\n", av.getId() + 1, av.getNome());
+            System.out.printf("%d - %s\n", av.getId(), av.getNome());
         }
     }
 
-    public AreaVerde buscar (String Verde){
-        for (AreaVerde av : areaVerdes) {
-            if (Verde.equalsIgnoreCase(av.getNome())) {
-                return av;
-            }
-        }
-        return null;
-    }
 
     public AreaVerde buscar (int id){
         for (AreaVerde av : areaVerdes) {
@@ -49,14 +41,24 @@ public class AreaVerdeRepo {
                 return av;
             }
         }
+        System.out.println("Nulo");
         return null;
     }
-
 
 
     public int tamanho (){
 
         return areaVerdes.size();
+    }
+
+    public AreaVerde salva (AreaVerde av){
+
+        av.setId( areaVerdes.size() + 1 );
+
+        areaVerdes.add( av );
+
+        return av;
+
     }
 
 

@@ -15,6 +15,8 @@ public class LocalizacaoRepositor {
 
         localizacoes.add(loc);
 
+        System.out.println("Localização Salva!");
+
         return loc;
     }
 

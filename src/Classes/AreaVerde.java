@@ -1,5 +1,8 @@
 package Classes;
 
+import Repositorios.AreaVerdeRepo;
+import Repositorios.LocalizacaoRepositor;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,8 +15,18 @@ public class AreaVerde {
     private Avaliacao avaliacao;
     private Localizacao localizacao;
 
-   private static ArrayList<String> atividades = new ArrayList<String>();
 
+
+   private ArrayList<String> atividades = new ArrayList<String>();
+
+    public AreaVerde( String nome, String horario, String vegetacaoTipo, String localizacao, LocalizacaoRepositor repositorio, AreaVerdeRepo av,Scanner scanner ) {
+        this.nome = nome;
+        this.horario = horario;
+        this.vegetacaoTipo = vegetacaoTipo;
+        this.localizacao = new Localizacao(localizacao, repositorio);
+        av.salva( this );
+        atividadesQuantidades(scanner);
+    }
 
     public int getId() {
         return id;
@@ -51,11 +64,13 @@ public class AreaVerde {
 
         System.out.println("Quantas atividades são disponiveís no parque?");
         int quantidade = resposta.nextInt();
+        resposta.nextLine();
 
         for (int i = 0; i < quantidade; i++) {
 
             System.out.printf("Digite a tividade %d: ", i + 1);
-            atividades.add(resposta.next());
+            atividades.add(resposta.nextLine());
+
         }
 
         System.out.println("Atividades registradas com sucesso!");
@@ -63,8 +78,10 @@ public class AreaVerde {
 
     public void listarAtividades() {
 
-        for (int i = 0; i < atividades.size(); i++) {
-            System.out.printf("%d - %s\n", i + 1, atividades.get(i));
+        System.out.println("\nLista de atividades");
+
+        for (int i = 0; i < this.atividades.size(); i++) {
+            System.out.printf("\n%d - %s", i + 1, this.atividades.get(i));
         }
     }
 
@@ -76,18 +93,28 @@ public class AreaVerde {
         this.avaliacao = avaliacao;
     }
 
-    public Localizacao getLocalizacao() {
-        return localizacao;
-    }
-
-    public void setLocalizacao(Localizacao localizacao) {
-        this.localizacao = localizacao;
-    }
-
     public Avaliacao avalia(int n1, int n2, int n3, int n4, int n5) {
 
         this.avaliacao = new Avaliacao(n1, n2, n3, n4, n5);
 
         return avaliacao;
     }
+
+    @Override
+    public String toString(){
+        System.out.println("\n===============================");
+        System.out.printf("Local: %s\n\nHorário de funcionamento: %s\n\nTipo de vegetação: %s\n\nLocalização: %s",nome,horario,vegetacaoTipo,localizacao.getLocalizacao());
+        System.out.println("\n===============================");
+        listarAtividades();
+        System.out.println("\n===============================");
+        if(this.avaliacao != null){
+            System.out.println(this.avaliacao.toString());
+            System.out.println("\n==============================");
+        }
+
+        return null;
+    }
+
+
+
 }
