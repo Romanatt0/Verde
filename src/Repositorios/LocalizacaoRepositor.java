@@ -1,10 +1,9 @@
 package Repositorios;
 
+import Classes.Avaliacao;
 import Classes.Localizacao;
 
 import java.util.ArrayList;
-
-
 
 public class LocalizacaoRepositor {
 
@@ -18,6 +17,22 @@ public class LocalizacaoRepositor {
         System.out.println("Localização Salva!");
 
         return loc;
+    }
+
+    public Localizacao buscar (int id){
+        for (Localizacao av : localizacoes) {
+            if (av.getId() == id) {
+                return av;
+            }
+        }
+        System.out.println("Nulo");
+        return null;
+    }
+
+    public void listar(){
+        for (Localizacao av : localizacoes) {
+            System.out.printf("\n%d - %.2f\n",av.getId(), av.getLocalizacao());
+        }
     }
 
 
