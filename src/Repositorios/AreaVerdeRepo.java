@@ -54,14 +54,4 @@ public class AreaVerdeRepo {
         return areaVerdes.size();
     }
 
-    public AreaVerde salva (AreaVerde av){
-
-        av.setId( areaVerdes.size() + 1 );
-
-        areaVerdes.add( av );
-
-        return av;
-    }
-
-
 }

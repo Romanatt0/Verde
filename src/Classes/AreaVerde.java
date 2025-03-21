@@ -22,7 +22,7 @@ public class AreaVerde {
         this.horario = horario;
         this.vegetacaoTipo = vegetacaoTipo;
         this.localizacao = new Localizacao(localizacao, repositorio);
-        av.salva( this );
+        av.areaVerdeSalvar( this );
         atividadesQuantidades(scanner);
     }
 

@@ -36,18 +36,18 @@ public class Main {
                 case 1:
 
                    listarAreaVerdes(avRepo2);
+
                     break;
 
                 case 2:
 
                     avaliar(novaArea,sc,avRepo2,avRepo);
-
                     
                     break;
 
                 case 3:
 
-                detalhes(novaArea,sc,avRepo2);
+                    detalhes(novaArea,sc,avRepo2);
 
                 break;
 
