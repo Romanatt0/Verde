@@ -148,15 +148,19 @@ public class Main {
         sc.nextLine();
         String nome = sc.nextLine();
 
-        System.out.print("\nInforme o em que o parque abre: ");
+        System.out.print("\nInforme o horário de funcionamento [HH:MM] - [HH:MM}: ");
         String horaro = sc.nextLine();
 
         System.out.print("\nInforme o tipo de vegetação: ");
         String vegetacaoTipo = sc.nextLine();
 
-        System.out.print("\nInforme a localização: ");
-        String localizacao = sc.nextLine();
+        System.out.print("\nInforme a latitude da localização: ");
+        int latitude = sc.nextInt();
 
+        System.out.print("\nInforme a longitude da localização: ");
+        int longitude = sc.nextInt();
+
+        String localizacao = String.format(latitude + " " + longitude);
         AreaVerde novaVerde = new AreaVerde(nome, horaro, vegetacaoTipo, localizacao, repo, avRepo2, sc);
 
         System.out.print("Area salva com sucesso!");

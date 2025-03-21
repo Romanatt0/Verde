@@ -30,7 +30,15 @@ public class AreaVerdeRepo {
 
     public void listarAreaVerdes() {
         for (AreaVerde av : areaVerdes) {
-            System.out.printf("%d - %s\n", av.getId(), av.getNome());
+            System.out.println("\n---------------------------------------");
+            System.out.printf("%d - %s\n\nTipo de vegetação: %s", av.getId(), av.getNome(), av.getVegetacaoTipo());
+
+            if(av.avalia() != null) {
+                System.out.printf("\nMédia: %.2f\n",av.getAvaliacao().media());
+            }
+
+
+
         }
     }
 

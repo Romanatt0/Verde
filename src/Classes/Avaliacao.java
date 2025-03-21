@@ -43,7 +43,7 @@ public class Avaliacao {
 
     @Override
     public String toString() {
-        return String.format("Avaliações " +
+        return String.format("\nAvaliações \n" +
                 "\nQualidade do ar: %d " +
                 "\nQuantidade de arvores: %d " +
                 "\nAuência de Poluição Sonora: %d " +

@@ -93,6 +93,10 @@ public class AreaVerde {
         this.avaliacao = avaliacao;
     }
 
+    public Avaliacao avalia() {
+        return avaliacao;
+    }
+
     public Avaliacao avalia(int n1, int n2, int n3, int n4, int n5) {
 
         this.avaliacao = new Avaliacao(n1, n2, n3, n4, n5);
@@ -102,14 +106,14 @@ public class AreaVerde {
 
     @Override
     public String toString(){
-        System.out.println("\n===============================");
-        System.out.printf("Local: %s\n\nHorário de funcionamento: %s\n\nTipo de vegetação: %s\n\nLocalização: %s",nome,horario,vegetacaoTipo,localizacao.getLocalizacao());
-        System.out.println("\n===============================");
+        System.out.print("\n===============================");
+        System.out.printf("\nLocal: %s\n\nHorário de funcionamento: %s\n\nTipo de vegetação: %s\n\nLocalização: %s",nome,horario,vegetacaoTipo,localizacao.getLocalizacao());
+        System.out.print("\n===============================");
         listarAtividades();
-        System.out.println("\n===============================");
+        System.out.print("\n===============================");
         if(this.avaliacao != null){
-            System.out.println(this.avaliacao.toString());
-            System.out.println("\n==============================");
+            System.out.print(this.avaliacao.toString());
+            System.out.print("\n==============================");
         }
 
         return null;
