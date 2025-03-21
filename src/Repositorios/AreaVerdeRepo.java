@@ -32,7 +32,7 @@ public class AreaVerdeRepo {
             System.out.println("\n---------------------------------------");
             System.out.printf("%d - %s\n\nTipo de vegetação: %s", av.getId(), av.getNome(), av.getVegetacaoTipo());
 
-            if(av.avalia() != null) {
+            if(av.getAvaliacao() != null) {
                 System.out.printf("\nMédia: %.2f\n",av.getAvaliacao().media());
             }
         }

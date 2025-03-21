@@ -51,11 +51,21 @@ public class AreaVerde {
     }
 
     public String getVegetacaoTipo() {
+
         return vegetacaoTipo;
     }
 
     public void setVegetacaoTipo(String vegetacaoTipo) {
+
         this.vegetacaoTipo = vegetacaoTipo;
+    }
+
+    public Avaliacao getAvaliacao() {
+        return avaliacao;
+    }
+
+    public void setAvaliacao(Avaliacao avaliacao) {
+        this.avaliacao = avaliacao;
     }
 
     public void atividadesQuantidades(Scanner resposta) {
@@ -81,18 +91,6 @@ public class AreaVerde {
         for (int i = 0; i < this.atividades.size(); i++) {
             System.out.printf("\n%d - %s", i + 1, this.atividades.get(i));
         }
-    }
-
-    public Avaliacao getAvaliacao() {
-        return avaliacao;
-    }
-
-    public void setAvaliacao(Avaliacao avaliacao) {
-        this.avaliacao = avaliacao;
-    }
-
-    public Avaliacao avalia() {
-        return avaliacao;
     }
 
     public Avaliacao avalia(int n1, int n2, int n3, int n4, int n5) {
