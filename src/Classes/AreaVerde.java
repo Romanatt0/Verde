@@ -15,8 +15,6 @@ public class AreaVerde {
     private Avaliacao avaliacao;
     private Localizacao localizacao;
 
-
-
    private ArrayList<String> atividades = new ArrayList<String>();
 
     public AreaVerde( String nome, String horario, String vegetacaoTipo, String localizacao, LocalizacaoRepositor repositorio, AreaVerdeRepo av,Scanner scanner ) {

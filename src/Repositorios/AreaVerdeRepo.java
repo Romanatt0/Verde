@@ -10,7 +10,6 @@ public class AreaVerdeRepo {
 
     private static ArrayList<AreaVerde> areaVerdes = new ArrayList<AreaVerde>();
 
-
     public static ArrayList<AreaVerde> getAreaVerdes() {
         return areaVerdes;
     }
@@ -36,9 +35,6 @@ public class AreaVerdeRepo {
             if(av.avalia() != null) {
                 System.out.printf("\nMédia: %.2f\n",av.getAvaliacao().media());
             }
-
-
-
         }
     }
 
@@ -53,7 +49,6 @@ public class AreaVerdeRepo {
         return null;
     }
 
-
     public int tamanho (){
 
         return areaVerdes.size();
@@ -66,7 +61,6 @@ public class AreaVerdeRepo {
         areaVerdes.add( av );
 
         return av;
-
     }
 
 

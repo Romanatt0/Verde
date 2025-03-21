@@ -13,24 +13,28 @@ public class Localizacao {
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
     public String getLocalizacao() {
+
         return localizacao;
     }
 
     public void setLocalizacao(String localizacao) {
+
         this.localizacao = localizacao;
     }
 
     @Override
     public String toString() {
-        return String.format("Localização [id=" + id + ", localização=" + localizacao + "]");
+        return String.format("Localização id=" + id + ", localização=" + localizacao + "]");
     }
 
 }

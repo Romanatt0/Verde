@@ -4,7 +4,6 @@ public class Avaliacao {
 
     private int id;
 
-
     int[] avaliacoes = new int[5];
 
     public int[] getAvaliacoes() {
@@ -24,10 +23,12 @@ public class Avaliacao {
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
